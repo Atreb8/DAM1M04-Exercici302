@@ -1,0 +1,29 @@
+{{> header}}
+{{> menu}}
+
+<main>
+  <h1>Customers</h1>
+
+  <div class="customers-container">
+    {{#each customers}}
+      <div class="customer-card">
+        <h3>{{first_name}} {{last_name}}</h3>
+        {{#if email}}
+          <p>Email: {{email}}</p>
+        {{/if}}
+
+        <h4>First 5 Rentals:</h4>
+        <div class="rentals-container">
+          {{#each rentals}}
+            <div class="rental-item">
+              {{title}} ({{rental_date}})
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+</main>
+
+{{> footer}}

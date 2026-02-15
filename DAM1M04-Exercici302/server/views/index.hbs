@@ -1,0 +1,30 @@
+{{> header}}
+{{> menu}}
+
+<main>
+  <h1>Home</h1>
+
+  <h2>Movies</h2>
+  <div class="movies-container">
+    {{#each movies}}
+      <div class="card">
+        <h3>{{title}} ({{release_year}})</h3>
+        <p><strong>Actors:</strong></p>
+        <ul>
+          {{#each (split actors ", ")}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+
+  <h2 class="category-title">Categories</h2>
+  <ul>
+    {{#each categories}}
+      <li>{{name}}</li>
+    {{/each}}
+  </ul>
+</main>
+
+{{> footer}}

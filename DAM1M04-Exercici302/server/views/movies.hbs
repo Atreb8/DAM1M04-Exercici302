@@ -1,0 +1,19 @@
+{{> header}}
+{{> menu}}
+
+<main>
+<h1>Movies</h1>
+
+<ul>
+  {{#each movies}}
+    <li>
+      <strong>{{title}}</strong> ({{release_year}})<br>
+      <small>{{actors}}</small>
+    </li>
+    <br>
+  {{/each}}
+</ul>
+
+</main>
+
+{{> footer}}
